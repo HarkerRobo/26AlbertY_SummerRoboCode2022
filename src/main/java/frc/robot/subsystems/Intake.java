@@ -42,7 +42,9 @@ public class Intake extends SubsystemBase {
         }
         motor.set(ControlMode.PercentOutput, output);
     }
-
+    public boolean getIntake() {
+        return intaking;
+    }
     public void toggle() {
         if(intake.get() == Value.kForward) {
             intake.set(Value.kReverse);
