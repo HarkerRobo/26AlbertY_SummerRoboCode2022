@@ -1,10 +1,10 @@
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.OI;
 import frc.robot.subsystems.Elevator;
+import harkerrobolib.commands.IndefiniteCommand;
 
-public class ElevatorManual extends CommandBase {
+public class ElevatorManual extends IndefiniteCommand {
     public ElevatorManual() {
         addRequirements(Elevator.getInstance());
     }

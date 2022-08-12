@@ -7,10 +7,15 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.commands.ArcadeDrive;
+import frc.robot.commands.ElevatorManual;
+import frc.robot.commands.IntakeManual;
+import frc.robot.commands.WristManual;
+import frc.robot.commands.WristRollersManual;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.Elevator;
-import frc.robot.subsystems.HatchLatcher;
 import frc.robot.subsystems.Intake;
+import frc.robot.subsystems.Wrist;
+import frc.robot.subsystems.WristRollers;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -26,10 +31,10 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
     Drivetrain.getInstance().setDefaultCommand(new ArcadeDrive()); 
-    OI.getInstance();
-    Intake.getInstance();
-    HatchLatcher.getInstance();
-    Elevator.getInstance();
+    Intake.getInstance().setDefaultCommand(new IntakeManual());
+    Elevator.getInstance().setDefaultCommand(new ElevatorManual());
+    Wrist.getInstance().setDefaultCommand(new WristManual());
+    WristRollers.getInstance().setDefaultCommand(new WristRollersManual());
   }
 
   @Override

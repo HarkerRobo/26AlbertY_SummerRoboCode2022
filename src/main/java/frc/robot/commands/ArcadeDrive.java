@@ -1,11 +1,11 @@
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.OI;
 import frc.robot.subsystems.Drivetrain;
+import harkerrobolib.commands.IndefiniteCommand;
 
 
-public class ArcadeDrive extends CommandBase{
+public class ArcadeDrive extends IndefiniteCommand{
     private double turn;
     private double drive;
     public ArcadeDrive () {

@@ -1,10 +1,10 @@
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.OI;
 import frc.robot.subsystems.Wrist;
+import harkerrobolib.commands.IndefiniteCommand;
 
-public class WristManual extends CommandBase {
+public class WristManual extends IndefiniteCommand {
     public WristManual() {
         addRequirements(Wrist.getInstance());
     }

@@ -1,10 +1,10 @@
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.OI;
 import frc.robot.subsystems.Intake;
+import harkerrobolib.commands.IndefiniteCommand;
 
-public class IntakeManual extends CommandBase {
+public class IntakeManual extends IndefiniteCommand {
     public IntakeManual() {
         addRequirements(Intake.getInstance());
 
@@ -20,9 +20,8 @@ public class IntakeManual extends CommandBase {
         }
         Intake.getInstance().setOutput(output);
     }
-    public boolean isFinished() {
-        return false;
-    }
+    
+    
     public void end(boolean interrupted) {
         Intake.getInstance().setOutput(0);
     }

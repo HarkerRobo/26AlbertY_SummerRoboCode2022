@@ -1,9 +1,8 @@
 package frc.robot;
 
-import frc.robot.commands.ElevatorManual;
-import frc.robot.commands.IntakeManual;
 import frc.robot.commands.ToggleExtender;
 import frc.robot.commands.ToggleFlower;
+import frc.robot.commands.ToggleIntake;
 import harkerrobolib.wrappers.HSGamepad;
 import harkerrobolib.wrappers.XboxGamepad;
 
@@ -17,8 +16,7 @@ public class OI {
         //commands
         driver.getButtonA().whenPressed(new ToggleFlower());
         driver.getButtonB().whenPressed(new ToggleExtender());
-        driver.getButtonX().whenPressed(new IntakeManual());
-        driver.getButtonY().whenPressed(new ElevatorManual());
+        driver.getButtonX().whenPressed(new ToggleIntake());
     }
 
     public HSGamepad getDriver() {
